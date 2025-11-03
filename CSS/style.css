@@ -1,5 +1,10 @@
 /* Dream Come True Section */
 
+@font-face {
+  font-family: Arlita;
+  src: url("../font/Arlita.otf");
+}
+
 body {
   background: #090601;
 }
@@ -45,4 +50,72 @@ body {
   border-radius: 16px;
   text-wrap: nowrap;
   color: var(--text-color);
+}
+
+.drm-cm-tru-card {
+  padding-block: 91px;
+}
+
+.card {
+  max-width: 451px;
+  height: 554px;
+  position: relative;
+  background: transparent;
+}
+
+.card > img {
+  border-radius: 26px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  position: absolute;
+  background: var(--secondary-color);
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  padding: 35px 0 77px;
+  text-align: center;
+  border-radius: 26px;
+  border: 1px solid rgba(219, 199, 97, 36%);
+  color: var(--text-color);
+}
+
+.card-content > a {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  border: 1px solid rgba(219, 199, 97, 36%);
+  border-radius: 36px 36px 0 0;
+}
+
+.card-content > a::after,
+.card-content > a::before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  /* background: red; */
+  border: solid rgba(219, 199, 97, 36%);
+  border-width: 0 0 1px;
+}
+
+.card-content > a::after {
+  bottom: -2px;
+  right: -36px;
+  border-radius: 0 0 0 22px;
+  box-shadow: -8px 16px 0 var(--secondary-color);
+  pointer-events: none;
+}
+
+.card-content > a > span {
+  padding: 16px 26px;
+  border: 1px solid rgba(219, 199, 97, 36%);
+  border-radius: 50px;
+  font-family: Arlita, sans-serif;
+  color: var(--text-color);
+  box-shadow: 0 30px 0 var(--secondary-color);
 }
