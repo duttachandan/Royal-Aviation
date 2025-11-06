@@ -197,6 +197,7 @@ a {
   overflow: hidden;
   color: var(--primary-color);
   text-decoration: none;
+  position: relative;
 }
 .primary-btn span {
   padding: 21px 29px;
@@ -205,4 +206,33 @@ a {
   align-items: center;
   border-radius: 50px;
   background: var(--secondary-color);
+}
+
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background: var(--grad);
+  transform-origin: left;
+  transition: all 0.5s linear;
+}
+
+.primary-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.primary-btn:hover::before {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+/* When mouse leaves, collapse toward right */
+.primary-btn:not(:hover)::before {
+  transform-origin: right !important; /* shrink toward right */
+}
+
+.shine {
 }
