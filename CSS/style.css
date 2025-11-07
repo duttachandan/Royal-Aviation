@@ -5,8 +5,13 @@
   src: url("../font/Arlita.otf");
 }
 
+@font-face {
+  font-family: clash-display;
+  src: url("../font/ClashDisplay-Regular.otf");
+}
+
 body {
-  background: #090601;
+  background: var(--secondary-color);
 }
 
 :root {
@@ -19,14 +24,73 @@ body {
     var(--secondary-color),
     var(--primary-color)
   );
+  --clash-family: clash-display;
 }
 
 a {
   display: inline-block;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .container {
   max-width: 1489px;
+}
+
+.primary-btn span {
+  padding: 10px 25px;
+  background: var(--secondary-color);
+  width: 100%;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+/* Header Section */
+
+nav,
+.navbar-collapsed,
+.navbar-collapsed > ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapsed {
+  flex-grow: 1;
+}
+
+.navbar-collapsed > ul {
+  margin: 0 auto;
+}
+
+.nav-items {
+  margin-right: 60px;
+}
+
+.nav-links {
+  color: var(--text-color);
+  font-family: var(--clash-family), sans-serif;
+}
+
+.active {
+  color: var(--primary-color) !important;
+}
+
+.user-btn {
+  margin-left: 44px;
+}
+
+/* 
+=============
+Dream Come True Section
+=============
+*/
+
+.drm-tru-sec,
+.jet-sec {
+  padding: 120px 0;
 }
 
 .left-line,
@@ -45,6 +109,7 @@ a {
   background: var(--grad);
   border-radius: 16px;
   padding: 1px;
+  width: fit-content;
 }
 
 .subtitle > span {
@@ -199,7 +264,7 @@ a {
   text-decoration: none;
   position: relative;
 }
-.primary-btn span {
+.drm-tru-sec .primary-btn span {
   padding: 21px 29px;
   display: flex;
   gap: 10px;
@@ -234,5 +299,39 @@ a {
   transform-origin: right !important; /* shrink toward right */
 }
 
-.shine {
+/* Our Jet Come Tre Section */
+
+.jet-wrapper {
+  position: sticky;
+  top: 100px; /* Adjust this for where it “sticks” on viewport */
+  border: 1px solid rgba(219, 199, 97, 0.36);
+  margin-bottom: 40px;
+  background: var(--secondary-color);
+  margin-bottom: 10px; /* Controls the scroll gap between cards */
+  transition: transform 1s linear;
+}
+
+/* Z-index layering (so newer cards stack above) */
+.jet-cards > .jet-wrapper:nth-child(1) {
+  z-index: 1;
+}
+.jet-cards > .jet-wrapper:nth-child(2) {
+  z-index: 2;
+}
+.jet-cards > .jet-wrapper:nth-child(3) {
+  z-index: 3;
+}
+
+.jet-card-img {
+  max-width: 673px;
+}
+
+.dummy-height {
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: 400px;
+  }
 }
