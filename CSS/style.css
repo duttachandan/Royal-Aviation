@@ -25,6 +25,7 @@ body {
     var(--primary-color)
   );
   --clash-family: clash-display;
+  --Arlita-family: Arlita;
 }
 
 a {
@@ -48,38 +49,106 @@ ul {
   border-radius: 50px;
 }
 
+.title1 {
+  font-family: var(--Arlita-family);
+  font-size: 80px;
+}
+
+.title3 {
+  font-size: 50px;
+  font-family: var(--Arlita-family);
+}
+
 /* Header Section */
 
-nav,
-.navbar-collapsed,
-.navbar-collapsed > ul {
-  display: flex;
-  align-items: center;
+.navbar-brand {
+  width: 169px;
 }
 
-.navbar-collapsed {
-  flex-grow: 1;
+.navbar-brand > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.navbar-collapsed > ul {
-  margin: 0 auto;
-}
-
-.nav-items {
-  margin-right: 60px;
-}
-
-.nav-links {
+.nav-link {
   color: var(--text-color);
   font-family: var(--clash-family), sans-serif;
 }
 
+.nav-item {
+  margin-right: 60px;
+}
+
+.nav-link:hover,
 .active {
   color: var(--primary-color) !important;
 }
 
-.user-btn {
+.user:hover > svg > path,
+.search:hover > svg > path {
+  stroke: var(--primary-color) !important;
+}
+
+.user {
   margin-left: 44px;
+}
+
+.offcanvas {
+  flex-direction: row;
+}
+
+/* 
+===========
+Banner Section
+===========
+*/
+
+.banner-section {
+  min-height: 100vh;
+  position: relative;
+  background: url("../assets/bgBanner.png") no-repeat center/cover;
+  /* Blur and gradient fade mask */
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.banner-section .title1 {
+  max-width: 828px;
+}
+
+.banner-section p {
+  max-width: 661px;
+  font-family: var(--clash-family);
+}
+
+.banner-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
+}
+
+.banner-wrpr {
+  position: relative;
+  z-index: 2;
+}
+
+.dummy-section {
+  min-height: 100vh;
+}
+
+.box {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background: red;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  background: blue;
 }
 
 /* 
@@ -299,7 +368,11 @@ Dream Come True Section
   transform-origin: right !important; /* shrink toward right */
 }
 
-/* Our Jet Come Tre Section */
+/* Our Jet Come True Section */
+
+.title3 > span {
+  color: var(--primary-color);
+}
 
 .jet-wrapper {
   position: sticky;
@@ -330,8 +403,35 @@ Dream Come True Section
   min-height: 100vh;
 }
 
+@media screen and (max-width: 1200px) {
+  .offcanvas {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title1 {
+    font-size: 40px;
+  }
+  .navbar-brand {
+    height: 100px;
+  }
+  .navbar-brand > img {
+    object-position: top;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .title3 {
+    font-size: 24px;
+  }
   .card {
     height: 400px;
+  }
+  .subtitle > span {
+    padding: 10px 15px;
+  }
+  .jet-sec {
+    padding: 60px 0;
   }
 }
