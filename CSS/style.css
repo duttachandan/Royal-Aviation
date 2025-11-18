@@ -15,7 +15,7 @@ body {
 }
 
 :root {
-  --primary-color: #f1e28c;
+  --primary-color: rgba(219, 199, 97, 79%);
   --secondary-color: #090601;
   --text-color: #f6f5f1;
   --grad: linear-gradient(
@@ -26,6 +26,7 @@ body {
   );
   --clash-family: clash-display;
   --Arlita-family: Arlita;
+  --bg-dark: #080806;
 }
 
 a {
@@ -60,6 +61,10 @@ ul {
 }
 
 /* Header Section */
+
+header {
+  background: var(--bg-dark);
+}
 
 .navbar-brand {
   width: 169px;
@@ -271,7 +276,11 @@ Dream Come True Section
   text-wrap: nowrap;
 }
 
-/* Join Our Aviation Club Section */
+/* 
+==============
+Join Our Aviation Club Section
+==============
+*/
 
 .join-our-sec-img {
   max-width: 696px;
@@ -399,8 +408,119 @@ Dream Come True Section
   max-width: 673px;
 }
 
-.dummy-height {
-  min-height: 100vh;
+/* Predestined Section */
+
+.predestined-section {
+  overflow: hidden;
+  background: transparent;
+  padding: 135px 0;
+  color: var(--text-color);
+}
+
+.predestined-wrapper {
+  border-radius: 40px;
+  /* padding: 61px 56px; */
+  padding: 3.177vw 2.917vw;
+  box-shadow: 0 0 119.5px #5f4a0a;
+  background: var(--bg-dark);
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-wrapper {
+  border-radius: 40px;
+  padding: 1px;
+  background: linear-gradient(
+    to bottom,
+    #f1e28c,
+    #f1e28c,
+    #0a0702,
+    transparent
+  );
+  position: relative;
+}
+
+.testimonial-wrapper > .testimonial-cntn {
+  height: 100%;
+  background: var(--bg-dark);
+  border-radius: 40px;
+}
+
+.testimonial-subtitle {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 16px;
+  padding: 1px;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -26px;
+  background: linear-gradient(45deg, #f1e28c, #090601, #f1e28c);
+}
+
+.testimonial-subtitle > span {
+  padding: 14px 58px;
+  border-radius: 16px;
+  display: inline-block;
+  color: var(--text-color);
+  background: var(--bg-dark);
+  font-family: var(--clash-family);
+}
+
+.testimonial-cntn {
+  padding: 121px 2.708vw;
+}
+
+.testimonial-img {
+  max-width: 678px;
+  margin: 0 auto;
+}
+.testimonial-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.testimonial-cntn .title2 {
+  margin: 17px 0 30px;
+}
+
+.testimonial-card {
+  padding: 25px 24px 24px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(241, 226, 140, 51%);
+  border-radius: 10px;
+  position: relative;
+}
+
+.testimonial-card::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: url("../assets/star.png");
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  z-index: 3;
+}
+
+.testimonial-card::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: #f1e28c;
+  filter: blur(20px);
+  position: absolute;
+  top: -25px;
+  right: -25px;
+}
+
+.testimonial-card > div {
+  margin-left: 20px;
+  color: var(--text-color);
+  text-transform: capitalize;
+  font-family: var(--clash-family);
 }
 
 @media screen and (max-width: 1200px) {
@@ -433,5 +553,16 @@ Dream Come True Section
   }
   .jet-sec {
     padding: 60px 0;
+  }
+
+  /* Predestined Section */
+  .testimonial-card {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .testimonial-card > div {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
