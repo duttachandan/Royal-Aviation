@@ -112,7 +112,7 @@ Banner Section
 .banner-section {
   min-height: 100vh;
   position: relative;
-  background: url("../assets/bgBanner.png") no-repeat center/cover;
+  background: url("../Assets/bgBanner.png") no-repeat center/cover;
   /* Blur and gradient fade mask */
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
