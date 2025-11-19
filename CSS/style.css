@@ -60,6 +60,27 @@ ul {
   font-family: var(--Arlita-family);
 }
 
+.title2 {
+  font-family: var(--Arlita-family), sans-serif;
+  color: var(--text-color);
+  font-size: 60px;
+  text-align: center;
+}
+
+.section-hdr > .title2 > span {
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.section-hdr p {
+  max-width: 479px;
+  margin: 0 auto;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+}
+
 /* Header Section */
 
 header {
@@ -113,7 +134,6 @@ Banner Section
   min-height: 100vh;
   position: relative;
   background: url("../Assets/bgBanner.png") no-repeat center/cover;
-  /* Blur and gradient fade mask */
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
@@ -163,11 +183,21 @@ Dream Come True Section
 */
 
 .drm-tru-sec,
-.jet-sec {
-  padding: 120px 0;
+.jet-sec,
+.spcl-offr-sec {
+  padding: 120px 0 0;
 }
 
-.left-line,
+.drm-tru-hdr {
+  margin-bottom: 30px;
+}
+
+.drm-tru-sec .title2 {
+  max-width: 8px;
+  margin: 0 auto;
+}
+
+.drm-tru-sec .left-line,
 .right-line {
   max-width: 783px;
 }
@@ -342,12 +372,13 @@ Join Our Aviation Club Section
   width: fit-content;
   background: var(--grad);
   border-radius: 50px;
-  padding: 1px;
+  padding: 2px;
   overflow: hidden;
   color: var(--primary-color);
   text-decoration: none;
   position: relative;
 }
+
 .drm-tru-sec .primary-btn span {
   padding: 21px 29px;
   display: flex;
@@ -412,6 +443,18 @@ Join Our Aviation Club Section
 
 .jet-card-img {
   max-width: 673px;
+}
+
+/* Special Offer Section */
+
+.spcl-offr-sec .title2 {
+  max-width: 715px;
+  margin: 0 auto;
+}
+
+.spcl-offr-sec .title2 span {
+  text-transform: capitalize;
+  color: var(--primary-color);
 }
 
 /* Predestined Section */
